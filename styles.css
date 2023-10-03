@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.header-title {
+    margin: 0;
+    padding: 1em;
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+}
+
+.main-section {
+    display: flex;
+    min-height: 100vh;
+}
+
+.add-book-section {
+    padding: 20px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    width: 360px;
+}
+
+
+.book-list {
+    background-color: white;
+    padding: 20px;
+}
+
+#name,
+#title,
+#number {
+width: 100%;
+padding: 15px 0 5px 0;
+background-color: #ffe4bc;
+border: none;
+border-bottom: 2px dotted;
+}
+
+  
+  /* 'ADD BOOK' BUTTON STYLE */
+  #add-book {
+    width: 200px;
+    padding: 19px 0;
+    margin-top: 40px;
+    border: 1px solid var(--blue);
+    border-radius: 2px;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: 0.3s;
+  }
+  #add-book:hover {
+    cursor: pointer;
+    border-color: var(--dark-blue);
+    background-color: var(--dark-blue);
+    transition: 0.3s;
+  }
+  /* LIBRARY INFO STYLE */
+  #library-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 360px);
+    padding: 30px;
+    background-color: var(--white);
+  }
+  #library-info {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    margin-bottom: 30px;
+    padding: 0 25px;
+    font-size: 18px;
+  }
+  #delete-all-btn {
+    width: 150px;
+    border: 1px solid var(--red);
+    border-radius: 2px;
+    background-color: var(--red);
+    color: var(--white);
+    transition: 0.3s;
+  }
+  #delete-all-btn:hover,
+  .confirm-removal:hover {
+    cursor: pointer;
+    border-color: var(--dark-red);
+    background-color: var(--dark-red);
+  }
+  
+  /* TABLE STYLE */
+  #books-list {
+    width: 70%;
+    border-collapse: collapse;
+  }
+  #books-list td {
+    padding: 25px;
+    border-bottom: solid 1px;
+  }
+  #book-requirements {
+    background-color: var(--blue);
+    color: var(--white);
+  }
+  .book-info {
+    border-bottom: 2px dotted var(--blue);
+  }
+  .book-info i {
+    padding: 5px;
+    font-size: 20px;
+  }
