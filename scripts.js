@@ -34,8 +34,16 @@ function displayLibraryInfo() {
             totalCompleted++;
         }
     }
-    console.log(totalCount);
-    console.log(totalCompleted);
+    const infoList = document.querySelector("#info-list");
+    infoList.textContent = "";
+    const totalInfo = document.createElement('div');
+    totalInfo.classList.add('info-element');
+    totalInfo.textContent = `Total: ${totalCount}`;
+    const readInfo = document.createElement('div');
+    readInfo.classList.add('info-element');
+    readInfo.textContent = `Read: ${totalCompleted}`;
+    infoList.appendChild(totalInfo);
+    infoList.appendChild(readInfo);
 }
 
 function displayBooks() {
@@ -98,3 +106,4 @@ function listenClicks() {
 }
 
 listenClicks();
+displayLibraryInfo();
