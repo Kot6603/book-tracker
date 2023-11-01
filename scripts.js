@@ -6,10 +6,9 @@ submitButton.addEventListener('click', event => {
     addBookToLibrary();
 }) 
 
-function Book(title, author, bookType, rating=0, readStatus=false) {
+function Book(title, author, rating=0, readStatus=false) {
     this.title = title
     this.author = author
-    this.bookType = bookType
     this.rating = rating
     this.readStatus = readStatus
 }
@@ -17,11 +16,10 @@ function Book(title, author, bookType, rating=0, readStatus=false) {
 function addBookToLibrary() {
     const bookTitle = document.getElementById("book_title").value;
     const author = document.getElementById("author").value;
-    const type = document.getElementById("type").value;
     const rating = document.getElementById("rating").value;
     const readStatus = !!document.getElementById("readStatus").value;
 
-    const new_book = new Book(bookTitle, author, type, rating, readStatus)
+    const new_book = new Book(bookTitle, author, rating, readStatus)
     myLibrary.unshift(new_book)
     displayBooks()
 }
@@ -62,10 +60,6 @@ function displayBooks() {
         const author = document.createElement('td');
         author.textContent = book.author;
         bookRow.appendChild(author);
-        // BOOK TYPE
-        const bookType = document.createElement('td');
-        bookType.textContent = book.bookType;
-        bookRow.appendChild(bookType);
         // BOOK RATING
         const rating = document.createElement('td');
         rating.textContent = book.rating;
