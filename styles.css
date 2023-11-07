@@ -1,81 +1,88 @@
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header-title {
-    margin: 0;
-    padding: 1em;
-    background-color: #1f2937;
-    color: white;
-    text-align: center;
+  margin: 0;
+  padding: 1em;
+  background-color: #1f2937;
+  color: white;
+  text-align: center;
 }
 
 .main-section {
-    display: flex;
-    min-height: 100vh;
+  display: flex;
+  min-height: 100vh;
 }
 
 .add-book-section {
-    padding: 20px;
-    background-color: grey;
-    display: flex;
-    flex-direction: column;
-    width: 360px;
+  padding: 20px;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  width: 25%;
 }
 
+.library-section {
+  width: 75%;
+}
+
+/* Form Styling */
+.add-book-section form {
+  border: solid 1px;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+table {
+  width: 100%;
+}
 
 .book-list {
-    background-color: white;
-    padding: 20px;
+  background-color: white;
+  padding: 20px;
+  width: 100%;
 }
 
-#name,
-#title,
-#number {
-width: 100%;
-padding: 15px 0 5px 0;
-background-color: #ffe4bc;
-border: none;
-border-bottom: 2px dotted;
+#libary-content {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: calc(100% - 360px);
+  padding: 30px;
+  background-color: white;
 }
 
-  
-  /* LIBRARY INFO STYLE */
-  #library-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    width: calc(100% - 360px);
-    padding: 30px;
-    background-color: var(--white);
-  }
-  #library-info {
-    display: flex;
-    justify-content: space-around;
-    width: 70%;
-    margin-bottom: 30px;
-    padding: 0 25px;
-    font-size: 18px;
-  }
-  
-  /* TABLE STYLE */
-  #books-list {
-    width: 70%;
-    border-collapse: collapse;
-  }
-  #books-list td {
-    padding: 25px;
-    border-bottom: solid 1px;
-  }
-  #book-requirements {
-    background-color: var(--blue);
-    color: var(--white);
-  }
-  .book-info {
-    border-bottom: 2px dotted var(--blue);
-  }
-  .book-info i {
-    padding: 5px;
-    font-size: 20px;
-  }
+#library-info {
+  display: flex;
+  justify-content: space-around;
+  width: 70%;
+  margin-bottom: 30px;
+  padding: 0 25px;
+  font-size: 18px;
+}
+
+/* Table Styles */
+#book-list {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#books-list td {
+  padding: 25px;
+  border-bottom: solid 1px;
+}
+#book-requirements {
+  background-color: blue;
+  color: white;
+}
+.book-info {
+  border-bottom: 2px dotted blue;
+}
+.book-info i {
+  padding: 5px;
+  font-size: 20px;
+}
